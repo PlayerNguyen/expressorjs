@@ -6,13 +6,13 @@ const { fatalError } = require("../utils/errors-handle");
 const socketController = require("../controllers/socketController");
 
 /**
- * Collect port from enviroment or set default port as 3000
+ * Collect port from environment or set default port as 3000
  *
  */
 const port = process.env.PORT || 3000;
 
 /**
- * Open socket whether found in enviroment
+ * Open socket whether found in environment
  * Default status is off
  *
  */
