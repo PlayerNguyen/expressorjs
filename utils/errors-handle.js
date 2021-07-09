@@ -8,6 +8,14 @@ const fatalError = (error) => {
   console.error(error);
 };
 
+const middlewareError = (err, req, res, next) => {
+  // Console logging out
+  fatalError(err);
+  // Send back to client
+  res.status(500).json(err);
+};
+
 module.exports = {
   fatalError,
+  middlewareError,
 };
