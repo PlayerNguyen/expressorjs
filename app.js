@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 
 const { middlewareError } = require("./utils/errors-handle");
-
+const users = require("./routers/userRouter");
 /**
  * Middleware settings here
  */
@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /**
  * Initialize stuffs
  */
-const users = require("./routers/userRouter");
 app.use("/users", users);
 
 /**
